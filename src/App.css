@@ -1,0 +1,92 @@
+body{
+    overflow: hidden;
+}
+.backShadow{
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1039;
+    overflow: hidden;
+    opacity: 0;
+    animation: openAnimeBackShadow 500ms forwards;
+}
+
+.backShadowClose{
+    animation: closeAnimeBackShadow 500ms;
+}
+
+@keyframes openAnimeBackShadow {
+    0%{height: 0%;opacity: 0 !important;}
+    100%{height: 100%; opacity: 1;}
+}
+
+@keyframes closeAnimeBackShadow {
+    0%{height: 100%; opacity: 1;}
+    100%{height: 0%;opacity: 0 !important;}
+}
+
+.w-48{
+    width: 48% !important;
+}
+
+
+.modal_board{
+    z-index: 1040 ;
+    opacity: 0;
+    animation: openAnimeModal 1s forwards;
+}
+
+.modal_board_close{
+    animation: closeAnimeModal 1s forwards;
+}
+
+
+@keyframes closeAnimeModal{
+    0%{
+        opacity: 0;
+        left: 50%;
+    }
+    100%{
+        opacity: 1;
+        left: 150%;
+    }
+}
+
+@keyframes openAnimeModal{
+    0%{
+        opacity: 0;
+        left: -100%;
+    }
+    100%{
+        opacity: 1;
+        left: 50%;
+    }
+}
+
+.center-absolute{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.relative-pos{
+    position: relative !important;
+}
+
+.ov-y{
+    overflow-y: scroll;
+}
+
+.h-75{
+    height: 75vh !important;
+}
+
+.pointer-cursor{
+    cursor: pointer;
+}
+
+
